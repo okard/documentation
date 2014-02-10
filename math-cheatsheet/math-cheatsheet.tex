@@ -1,0 +1,379 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{ifluatex}
+\ifluatex
+	\usepackage{fontspec}
+	\setmainfont{Linux Libertine O}
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage{libertine}
+	\usepackage[T1]{fontenc}
+\fi
+
+\usepackage[ngerman,english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{color}
+
+\newcommand{\todo}[1]{ \colorbox{yellow}{\textcolor{red}{\textbf{TODO:} {#1}}}\\ }
+
+\begin{document}
+
+\tableofcontents
+
+
+%englische begriffe dazu?
+%mathe schreibweisen? dx/x
+
+
+\section{Beweisführung}
+
+% Impliziert => <=>
+
+
+\section{Zahlen}
+\begin{tabular}{ll}
+$\mathbb{N}$ & Ganze Zahlen 0 bis $\infty$ \\
+$\mathbb{N}^*$ & Ganze Zahlen 1 bis $\infty$ \\
+$\mathbb{Z}$ & Ganze Zahlen $[-\infty, \infty]$ \\
+$\mathbb{Q}$ & Rationale Zahlen $\frac{m}{n}$\\
+$\mathbb{R}$ & Reelle Zahlen ($\mathbb{Q}$ + Irrationale Zahlen)\\
+$\mathbb{C}$ & Komplexe Zahlen\\
+\end{tabular} 
+
+\todo{Weitere Erklärung zu Zahlengruppen -> Referenz auf Gruppen/Ringe/etc}
+
+\section{Gruppen, Ringe, Körper}
+\todo{...}
+
+\subsection{Gruppen}
+\todo{...}
+
+\section{Komplexe Zahlen}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{ll}
+Basis Definition & $ z = a + b \cdot i $ \\ 
+				 & $ i^{2} = -1 $ \\ %wurzel -1 = i?
+				 & $\sqrt{-1} = \sqrt{i^2} = i $ \\
+				 & $Re(a + bi) = a$ \\
+				 & $Im(a + bi) = b$ \\
+Addition 		 & $ (a + bi) + (c + di) = (a+c)+(b+d)i $\\
+Subtraktion 	 & $ (a + bi) - (c + di) = (a-c)+(b-d)i $\\
+Multiplikation   &  $(a+b\,i)\cdot(c+d\,i)=(ac-bd) + (ad+bc)\cdot i. $\\
+Division         & 
+    $\frac{a+b\,\mathrm i}{c+d\,\mathrm i} = \frac{(a+b\,\mathrm i)(c-d\,\mathrm i)}{(c+d\,\mathrm i)(c-d\,\mathrm i)} = \frac{ac+bd}{c^2+d^2}+\frac{bc-ad}{c^2+d^2}\cdot\mathrm i. $\\
+Betrag 			 & $ |z| = \sqrt{a^{2} + b^{2}} $ \\ 
+\end{tabular} 
+
+%mengen?
+%logik? <-> -> etc
+
+\section{Grund-Rechenregeln}
+
+\subsection{Potenzen}
+
+$ a^{b} * a^{c} = a^{b+c} $\\
+$ \dfrac{1}{x^2} = x^{-2}$
+
+\subsection{Wurzeln}
+
+$\sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{a \cdot b}  $ \\
+$\sqrt[n]{x^{m}} = x^{\frac{m}{n}}  $ \\
+$\sqrt[n]{x} = x^{\frac{1}{n}} = exp(\dfrac{ln(x)}{n})$
+
+\subsection{Brüche}
+
+\todo{Addition}
+\todo{Subtraction}
+\todo{Multiplikation}
+\todo{Division}
+
+$ \dfrac{a^{n}}{b^{m}} = a^{n} \cdot b^{-m}$
+
+\subsection{Summen}
+
+Umformungen
+
+
+\subsection{Fakultät}
+
+$ n! = 1\cdot 2\cdot 3\cdot \dots\cdot n =  \prod \limits_{k=1}^{n}k $\\
+$ n! = n * (n-1)!$\\
+$ 0! = 1 $\\
+$ 1! = 1 $\\
+
+Umformungen
+
+% n! =n *(n -1)! 
+% \(\prod \limits_{i=1}^{n+1}i = 1\cdot 2\cdot\dots\cdot n\cdot (n+1) \)
+%binomialkoeffizient
+
+
+\subsection{e-Funktion/Logarithmus}
+
+$ e = \lim_{n\to\infty} \left(1+\frac{1}{n}\right)^n $\\
+$ e^{x} = exp(x) = \sum_{n=0}^\infty \dfrac{x^{n}}{n!} $ \\
+$ e^{1} = \sum_{n=0}^\infty \dfrac{1}{n!} = 2.7182818284590...$\\
+$ a^{x} = e^{x \cdot ln a}$\\
+$ ln(e^y) = y $\\
+
+\subsection{Trigonometrische Funktionen (sin/cos/tan)}
+
+% bogenmaß
+% umfang des einheitskreis -> 2\pi
+% bogenmaß = [0, 2\pi]
+% rad
+% der grad ist dann 0-360 <-> 0 - 2\pi
+
+% tabelle Grad-PI-rad sin/cos siehe script
+
+
+%umformungen sinus auflösen etc
+
+\subsection{Binominialkoeffizient}
+
+$ \binom nk $
+$ \binom nk = \prod_{j=1}^k \frac{n + 1 - j}j$
+
+%rechenregeln
+
+\section{Hilfsmittel}
+
+\begin{itemize}
+\item Binomische Formeln
+\item Quadratische Ergänzung
+\item Vollständige Induktion
+\end{itemize}
+
+% quadratische Ergänzung
+% binomische formeln
+
+%% einordnen von gleichungen?
+
+\section{Differentialrechnung}
+
+\subsection{Notation}
+\begin{flushleft}
+
+Eine Funktion $f \colon U \to \mathbb{R}$, die ein offenes Intervall $U$ in die reellen Zahlen abbildet, heißt differenzierbar an der Stelle $x_0 \in U$, falls der Grenzwert existiert.
+
+\[\lim_{x\to x_0} \frac{f(x) - f(x_0)}{x - x_0} = \lim_{h\to 0} \frac{f(x_0 +h) - f(x_0)}{h}   (h = x - x_0)\]
+
+%steigungsdreieck?
+
+Dieser Grenzwert heißt Differentialquotient oder Ableitung von $f$ nach $x$ an der Stelle $x_0$ und wird als
+$ f'(x_0)$   oder   $\left.\frac{\mathrm df(x)}{\mathrm dx}\right|_{x=x_0}$   oder   $\frac{\mathrm df}{\mathrm dx}(x_0)$   oder   $\frac{\mathrm d}{\mathrm dx}f(x_0)$   notiert 
+
+Nicht überall differenzierbar:
+$f(x) = |x|$
+
+$f'(0)$ existiert nicht
+
+\end{flushleft}
+    
+\subsection{Ableitungsregeln}
+
+
+\begin{tabular}{ll}
+Potenzregel & $\left(x^n\right)' = n x^{n-1} $ \\
+Produktregel & $(g\cdot h)' = g' \cdot h + g \cdot h'$ \\
+Quotientenregel & 
+    $\left(\frac{g}{h}\right)' = \frac{g' \cdot h - g \cdot h'}{h^2}$ \\
+Kettenregel & $(g \circ h)'(x) = (g(h(x)))' = g'(h(x))\cdot h'(x)$\\
+\end{tabular}
+
+% (\ln(f))' = \frac{f'}{f} 
+
+
+\subsubsection{Nullstellen}
+
+
+\todo{p/q-formel}
+%nullstellen x² x³ -> p/q formel
+
+$ x^2+px+q=0$\\
+$x_{1,2} = - \frac{p}{2}\pm\sqrt{\left(\frac{p}2\right)^2 - q}$
+
+%Kurveldiskussion
+% sattelpunkt
+% extrem punkt
+
+% differenzierung ableitungsregeln
+
+\subsection{Partielle Ableitungen}
+
+Für Funktionen mit mehreren Argumenten:
+$f(x,y) = x^2 \sin(xy)$
+
+Für einzelne Argumente ableiten:
+$\dfrac{\partial f}{\partial x_i}$
+
+% jacobi matrix
+
+%mittelwertsatz der differntialrechnung
+
+% rechnen mit mehreren variablen
+
+
+\section{Integralrechnung}
+
+Umkehrschritt der Differentialrechnung
+Aufleitung
+
+Berechnet Fläche einer Funktion
+[Bild]
+
+
+\subsection{Stamm-Funktionen}
+
+% https://www.youtube.com/watch?v=8ynwPeV_VGQ
+
+%wurzel oder e funktion -> substituieren
+
+% substitution
+% https://www.youtube.com/watch?v=z_flzV7SBBw
+
+%Partielle Integration
+
+$\int f'(x) * g(x) dx = f(x)*g(x) - \int f(x) * g'(x) dx$
+
+%partialbruch zerlegung
+
+%mittelwertsatz der integralrechnung
+
+% rechnen mit mehreren variablen
+
+\section{Differentialgleichungen}
+
+\subsection{Klassifikation}
+
+
+\subsubsection{Ordnung}
+	Die Ordnung entspricht der maximalen Ableitung
+
+\subsubsection{Explizit/Implizit}
+	Explizit: Die höchste Ableitung steht auf einer Seite alleine.
+	
+	
+\subsubsection{Gewöhnliche/Partielle}
+	Eine unabhänige variable ist gewöhnlich
+	$f(x)$
+
+	Mehrere Unabhängige Variablen?
+	$f(x,y)$
+	Partielle Ableitungen
+	
+	
+\subsubsection{Linear/Nicht linear}
+
+	$sin(x) \cdot y'' + 42 \cdot y' - x^2 \cdot y = $
+	
+	$ X \cot y $
+	y einfach, nicht als Quadrat/im Sinus/Unter Wurzel/ etc
+	
+	X funktionen von unabhängigenvariable x, konstante, ...
+	
+	(imhomoginität darf von X abhängen)
+	(-> Lineare Gleichungssysteme)
+	
+	Mit Konstanten-Koeffizienten
+	
+	
+	Homogene Lineare 
+	ist was anderes als generell homogen/inhomogen
+	
+
+
+
+Varianten:
+	(DGL)
+	einfache Differentialgleichungen
+	partielle Differentialgleichungen
+
+	homogone autonome
+	
+	lineare
+	
+Schreibweisen:
+	$ f'(x) = 3f(x) + x^2 $
+	$ y'(x) = 3y(x) + x^2 $
+	
+
+\section{Vektoren}
+
+\subsection{Notation}
+$\mathbb{R}^{n}$
+$\vec{v}$
+
+\subsection{Rechenregeln}
+%rechnen add/sub/mul/div
+% 
+
+\section{Matrizen}
+
+\subsection{Notation}
+
+$\mathbb{R}^{m\times n}$
+
+$A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix} $
+
+% normalbasis R2 und R3 
+% berechnungen zur basis
+
+\subsection{Determinante}
+
+%dreiecks matrizen
+
+\subsubsection{Satz von Sarrus}
+$\det(A) = aei + bfg + cdh - gec -hfa -idb.$
+
+$\det(A) = \det \begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - cb.$
+
+\subsection{Eigenwerte}
+
+% Eigenwerte ermitteln:
+
+% - mit \lambda * einheitsmatrix subtrahahieren
+% - determinante ausrechnen 
+% - nullstellen (von lambda) in determinanten-funktion
+
+
+% vektorräume
+% eigenraum
+% eigenvektor
+% basis
+
+% hesse matrix
+
+% stetigkeit
+% konvergenz
+% häufungspunkte
+% L'Hospital
+
+% Wahrscheinlichkeitsrechnung
+% Statistik
+
+% folgen/reihen
+% Relationen
+
+\section{Numerische Methoden}
+
+\todo{...}
+
+\subsection{Numerische Integration}
+\todo{...}
+
+\section{Zusätzliche Beispiele}
+\todo{Beispiele}
+
+\section{Herleitungen}
+\todo{Herleitungen von Formeln}
+
+\section{Beweise}
+\todo{Beweise erklären}
+
+
+\end{document}
