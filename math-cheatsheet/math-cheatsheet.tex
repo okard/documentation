@@ -17,23 +17,41 @@
 
 \usepackage{color}
 
-\newcommand{\todo}[1]{ \colorbox{yellow}{\textcolor{red}{\textbf{TODO:} {#1}}}\\ }
+\newcommand{\todo}[1]{\begin{flushleft} \colorbox{yellow}{\textcolor{red}{\textbf{TODO:} {#1}}}\end{flushleft} }
+
+\title{Mathe-Formelsammlung / Cheatsheet}
 
 \begin{document}
 
+\maketitle
 \tableofcontents
+\pagebreak
 
 
-%englische begriffe dazu?
 %mathe schreibweisen? dx/x
 
 
+\todo{Englische Begriffe als Notiz?}
+\todo{Teilgebiete der Mathematik erklären, Analysis, Algebra, ...}
+\begin{flushleft}
+Lizenziert unter  der Creative Commons BY-NC-SA Lizenz \\
+http://creativecommons.org/licenses/by-nc-sa/4.0/
+\end{flushleft}
+
+
 \section{Beweisführung}
+\todo{...}
+\todo{Axiome}
+\todo{(Bool und Logik)}
 
 % Impliziert => <=>
 
+% Gegenbeweise
+% Induktion
+
 
 \section{Zahlen}
+
 \begin{tabular}{ll}
 $\mathbb{N}$ & Ganze Zahlen 0 bis $\infty$ \\
 $\mathbb{N}^*$ & Ganze Zahlen 1 bis $\infty$ \\
@@ -43,15 +61,141 @@ $\mathbb{R}$ & Reelle Zahlen ($\mathbb{Q}$ + Irrationale Zahlen)\\
 $\mathbb{C}$ & Komplexe Zahlen\\
 \end{tabular} 
 
-\todo{Weitere Erklärung zu Zahlengruppen -> Referenz auf Gruppen/Ringe/etc}
+\todo{Bezug auf Zahlensystem, Dezimalsystem, Zahlsystem mit Basis}
 
-\section{Gruppen, Ringe, Körper}
+Irrationale Zahlen:
+Kein Verhältnis zweier Ganzzahlen ($\frac{m}{n}$)
+Beispiel: eulersche Zahl $e$, 
+die Kreiszahl $\pi$, 
+die Wurzel aus Zwei $\scriptstyle\sqrt{2}$ 
+
+% unterschied(->verhältnis)  \pi mit unendlich stellen vs 0,periode 3 (1/3)
+
+\todo{Weitere Erklärung zu Zahlengruppen/Zahlensysteme -> Referenz auf Gruppen/Ringe/etc}
+
+
+
+\section{Mengen \& Algebraische Strukturen}
+
+\subsection{Kommutativ, Assoziativ \& Distributiv}
+
+${\circ}\colon A \times A\to A $\\
+${\diamond}\colon A \times A\to A$ \\
+$a,b,c\in A $ \\
+\\
+Die Verknüpfung $\circ$ ist\\
+\\
+\begin{tabular}{ll}
+kommutativ & $a \circ b = b \circ a$ \\ 
+assoziativ & $ a \circ \left( b \circ c \right) = \left( a \circ b \right) \circ c $ \\  
+linksdistributiv über $\diamond$ & $a \circ (b \diamond c) = (a \circ b) \diamond (a \circ c)$ \\ 
+rechtsdistributiv über $\diamond$ & $(a \diamond b) \circ c = (a \circ c) \diamond (b \circ c)$ \\ 
+distributiv über $\diamond$ & wenn sie links- und rechtsdistributiv über $\diamond$ ist.
+\end{tabular} 
+
+
+
+
+\subsection{Mengen}
 \todo{...}
 
 \subsection{Gruppen}
+Ist eine Menge
+$(G,*)$\\
+$*(a \in G, a \in G)$\\
+$*\colon G\times G\to G,(a,b)\mapsto a*b $\\
+
+Assoziativität: Für alle Gruppenelemente a, b und c gilt: $(a*b)*c=a*(b*c).$ \\
+
+Es gibt ein neutrales Element $e\in G$, mit dem für alle Gruppenelemente $a\in G$ gilt: $a*e=e*a=a$.\\
+
+Zu jedem Gruppenelement $a\in G$ existiert ein inverses Element $a^{{-1}}\in G$ mit $ a*a^{{-1}}=a^{{-1}}*a=e$.
+
 \todo{...}
 
+\todo{symbole: teilmenge, etc}
+
+\subsection{Ringe}
+Ist eine Menge
+\todo{...}
+\subsection{Körper}
+Ist Menge, Gruppe
+\todo{...}
+
+
+\subsection{Zahlensysteme}
+	Sind körper?
+
+\subsection{Raum}
+
+\section{Funktionen/Abbildungen/Folgen/Reihen}
+
+\subsection{Relation}
+\todo{...}
+
+\subsection{Funktion / Abbildung}
+In der Mathematik ist eine Funktion oder Abbildung eine Beziehung (Relation) zwischen zwei Mengen, 
+
+\todo{Konvergenz/Stetigkeit/etc}
+
+
+\todo{spezielle abbildungen: normen }
+
+
+\subsubsection{Stetigkeit}
+Nur für relle Funktionen (relevant)?  (Abbildung nach R) 
+
+Epsilon-Delta-Kriterium
+
+Lipschitz-Stetigkeit
+
+
+\todo{Grenzwert}
+	% vs folge?
+
+
+\subsection{Folgen}
+
+	Formal definiert ist eine unendliche Folge als eine Abbildung
+
+	$a_n = x$\\
+	$a_n = n$
+	
+	\subsubsection{Grenzwerte}
+	\todo{Grenzwert}
+		
+		% Rechenregeln
+		% Beispiele
+		
+	
+		
+	\todo{konvergent/divergent}
+	\todo{monoton}
+	\todo{beschränkt}
+	Eine Folge heißt nach oben beschränkt, wenn sie eine obere
+	 Schranke S besitzt, so dass für alle i aus  gilt: a i S. Die
+	  kleinste obere Schranke einer Folge heißt auch ihr Supremum.
+	   Die Begriffe nach unten beschränkt, größte untere Schranke 
+	   und Infimum sind analog definiert. Eine Folge die nach oben
+	    und unten beschränkt ist, heißt beschränkte Folge.
+		
+	Nachweis der Beschränktheit/Bestimmung einer Schrank
+	Es muss also angenommen werden, dass es eine Schranke gibt
+	
+	
+	\todo{Häufungspunkt}
+	
+	\todo{Konvergenzkriterium von Cauchy}
+	\todo{Satz von Bolzano Weierstraß}
+
+\todo{Relationen}
+
+\subsection{Reihen}
+	Eine Reihe ist eine Folge
+
+
 \section{Komplexe Zahlen}
+Spezieller Körper (zu zahlensysteme bei mengen usw?)
 
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{ll}
@@ -71,12 +215,30 @@ Betrag 			 & $ |z| = \sqrt{a^{2} + b^{2}} $ \\
 %mengen?
 %logik? <-> -> etc
 
+
+
+
+
 \section{Grund-Rechenregeln}
+
+Dezimalsystem und $\mathbb{R}/\mathbb{C}$?
+% Addition/Subtraktion/Multiplikation/Division?
+
+
+
+\subsection{Gleichungen}
+\todo{.. }
+
+\subsection{Ungleichungen}
+\todo{.. }
+% tips, annahmen, etc
 
 \subsection{Potenzen}
 
 $ a^{b} * a^{c} = a^{b+c} $\\
-$ \dfrac{1}{x^2} = x^{-2}$
+$ \dfrac{1}{x^2} = x^{-2}$\\
+$a^{r-s}=\frac{a^r}{a^s}$\\
+$ a^{-r} = \frac{1}{a^r}$\\
 
 \subsection{Wurzeln}
 
@@ -95,8 +257,14 @@ $ \dfrac{a^{n}}{b^{m}} = a^{n} \cdot b^{-m}$
 
 \subsection{Summen}
 
-Umformungen
+\todo{Generell}
 
+$ \sum_{k=m}^{n}a_k = \sum_{m \leq k \leq n}a_k = a_m + a_{m+1} + \dots + a_n $
+
+\todo{Umformungen}
+
+% elemente rausziehen
+% aufteilen
 
 \subsection{Fakultät}
 
@@ -105,7 +273,11 @@ $ n! = n * (n-1)!$\\
 $ 0! = 1 $\\
 $ 1! = 1 $\\
 
-Umformungen
+\todo{Umformungen}
+
+Einzelne Faktoren die nicht vom Index abhängen lassen sich vorziehen:
+$\prod \limits_{k=1}^{n} a* k  = a^n * \prod \limits_{k=1}^{n} k$
+
 
 % n! =n *(n -1)! 
 % \(\prod \limits_{i=1}^{n+1}i = 1\cdot 2\cdot\dots\cdot n\cdot (n+1) \)
@@ -118,10 +290,22 @@ $ e = \lim_{n\to\infty} \left(1+\frac{1}{n}\right)^n $\\
 $ e^{x} = exp(x) = \sum_{n=0}^\infty \dfrac{x^{n}}{n!} $ \\
 $ e^{1} = \sum_{n=0}^\infty \dfrac{1}{n!} = 2.7182818284590...$\\
 $ a^{x} = e^{x \cdot ln a}$\\
+
+$ ln $ natürlicher logarithmus $ e^x \rightarrow x = log_e (e^x) = ln(e^x)$ \\
 $ ln(e^y) = y $\\
+$ ln(\frac{1}{a}) =  $\\
+
+$ log_b a $ 
+
+$ lg lb $\\
+$ \log_b \frac 1x = -\log_b x $
+
 
 \subsection{Trigonometrische Funktionen (sin/cos/tan)}
 
+
+\todo{Bogenmaß}
+\todo{Einheitskreis}
 % bogenmaß
 % umfang des einheitskreis -> 2\pi
 % bogenmaß = [0, 2\pi]
@@ -129,9 +313,18 @@ $ ln(e^y) = y $\\
 % der grad ist dann 0-360 <-> 0 - 2\pi
 
 % tabelle Grad-PI-rad sin/cos siehe script
+\todo{Tabelle Grad/PI/RAD -> cos/sin/tan}
+
+%Winkel \alpha (Grad) 	0^\circ 	30^\circ 	45^\circ 	60^\circ 	90^\circ 	180^\circ 	270^\circ 	360^\circ
+%Bogenmaß 	0 	\frac{\pi}{6} 	\frac{\pi}{4} 	\frac{\pi}{3} 	\frac{\pi}{2} 	\pi 	\frac{3\pi}{2} 	2\pi
+%Sinus 	\frac12\sqrt0 = 0 	\frac12\sqrt1 = \frac12 	\frac12\sqrt2=\frac{1}{\sqrt2} 	\frac12\sqrt3 	\frac12\sqrt4 = 1 	0 	-1 	0
+%Kosinus 	\frac12\sqrt4 = 1 	\frac12\sqrt3 	\frac12\sqrt2=\frac{1}{\sqrt2} 	\frac12\sqrt1 = \frac12 	\frac12\sqrt0 = 0 	-1 	0 	1
+% tangens
 
 
 %umformungen sinus auflösen etc
+
+\todo{Umformungen}
 
 \subsection{Binominialkoeffizient}
 
@@ -140,7 +333,12 @@ $ \binom nk = \prod_{j=1}^k \frac{n + 1 - j}j$
 
 %rechenregeln
 
+
+
+
 \section{Hilfsmittel}
+
+% für umformungen?
 
 \begin{itemize}
 \item Binomische Formeln
@@ -153,7 +351,114 @@ $ \binom nk = \prod_{j=1}^k \frac{n + 1 - j}j$
 
 %% einordnen von gleichungen?
 
+
+\section{Vektoren}
+
+\subsection{Notation}
+$\mathbb{R}^{n}$
+$\vec{v}$
+
+\subsection{Rechenregeln}
+%rechnen add/sub/mul/div
+% 
+
+\section{Matrizen}
+
+\subsection{Notation}
+
+Beispiel für Matrix-Raum $\mathbb{R}^{m\times n}$ das Bedeutet jede Matrix aus diesem Raum hat $m \cdot n $ Elemente das sind $m$ Zeilen und $n$ Spalten.
+Ein Element kann referenziert werden mit $a_{ij}$ mit $i \in [1, m], j \in [1, n] $
+\\
+
+$A \in \mathbb{R}^{3\times 3} = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix} 
+   = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{mn} \end{pmatrix} 
+ $
+
+
+
+\subsubsection{Identitäts-Matrix}
+
+% normalbasis R2 und R3 
+% berechnungen zur basis
+
+
+\subsection{Matrix Operationen}
+
+\subsubsection*{Addition / Subtraktion}
+
+Beide Matrizen müssen vom selben Typ sein also z.B. $A,B \in \mathbb{C}^{m\times n}$
+
+$ A+B := (a_{ij}+b_{ij})_{i=1 , \ldots , m; \ j=1 , \ldots , n} $
+
+
+$\begin{pmatrix} 1 & -3  \\ 1 & 2  \end{pmatrix} 
++ \begin{pmatrix} 0 & 3  \\ 2 & 1 \end{pmatrix} 
+= \begin{pmatrix} 1+0 & -3+3  \\ 1+2 & 2+1  \end{pmatrix} 
+= \begin{pmatrix} 1 & 0  \\ 3 & 3  \end{pmatrix} 
+$
+
+Subtraktion äquialent dazu
+
+\subsubsection*{Skalar-Multiplikation}
+
+
+$\lambda\cdot A := (\lambda\cdot a_{ij})_{i=1, \ldots , m; \ j=1, \ldots , n}$
+
+$\lambda\cdot \begin{pmatrix} a & b  \\ c & d  \end{pmatrix} = 
+\begin{pmatrix} a \cdot\lambda & b\cdot\lambda  \\ c\cdot\lambda & d\cdot\lambda  \end{pmatrix} $
+
+\subsubsection*{Matrix-Multiplikation}
+
+
+$B \cdot A \neq A \cdot B $
+aber:
+$(A \cdot B) \cdot C = A \cdot (B \cdot C) $
+
+\subsubsection*{Transponiert}
+
+\subsubsection*{Inverse}
+
+\subsubsection*{Multiplikation mit Vektoren}
+
+
+\subsection{Eigenschaften}
+% hermitesch
+% diagonalisierbar
+
+\subsection{Determinante}
+
+%dreiecks matrizen
+
+\subsubsection{Satz von Sarrus}
+$\det(A) = aei + bfg + cdh - gec -hfa -idb.$
+
+$\det(A) = \det \begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - cb.$
+
+\subsection{Eigenwerte}
+
+% Eigenwerte ermitteln:
+
+% - mit \lambda * einheitsmatrix subtrahahieren
+% - determinante ausrechnen 
+% - nullstellen (von lambda) in determinanten-funktion
+
+
+\todo{vektorräume}
+\todo{eigenraum}
+\todo{eigenvektor}
+\todo{ basis }
+
+\todo{hesse matrix}
+
+\todo{häufungspunkte}
+\todo{L'Hospital}
+
+
+
 \section{Differentialrechnung}
+
+% ACHTUNG vs Differentialgleichung DGL
+Bei Differentialrechnung Berechnung lokaler Veränderungen von Funktionen. Steigung an bestimmten Punkten.
 
 \subsection{Notation}
 \begin{flushleft}
@@ -220,11 +525,13 @@ $\dfrac{\partial f}{\partial x_i}$
 
 \section{Integralrechnung}
 
+Bei Integralrechnung Berechnung von einer Fläche.
+
 Umkehrschritt der Differentialrechnung
 Aufleitung
 
 Berechnet Fläche einer Funktion
-[Bild]
+\todo{[Bild]}
 
 
 \subsection{Stamm-Funktionen}
@@ -234,9 +541,13 @@ Berechnet Fläche einer Funktion
 %wurzel oder e funktion -> substituieren
 
 % substitution
+\subsection{Substitution}
+
 % https://www.youtube.com/watch?v=z_flzV7SBBw
 
-%Partielle Integration
+\subsection{Partielle Integration} 
+
+% partielle Integration, Substitution
 
 $\int f'(x) * g(x) dx = f(x)*g(x) - \int f(x) * g'(x) dx$
 
@@ -247,6 +558,11 @@ $\int f'(x) * g(x) dx = f(x)*g(x) - \int f(x) * g'(x) dx$
 % rechnen mit mehreren variablen
 
 \section{Differentialgleichungen}
+
+Bei Differentialgleichungen(DGL) Funktion gesucht die von einer oder mehreren Variablen abhängt und in der auch Ableitungen dieser Funktion vorkommen.
+
+
+\todo{Schreibweisen}
 
 \subsection{Klassifikation}
 
@@ -302,71 +618,26 @@ Schreibweisen:
 	$ y'(x) = 3y(x) + x^2 $
 	
 
-\section{Vektoren}
 
-\subsection{Notation}
-$\mathbb{R}^{n}$
-$\vec{v}$
-
-\subsection{Rechenregeln}
-%rechnen add/sub/mul/div
-% 
-
-\section{Matrizen}
-
-\subsection{Notation}
-
-$\mathbb{R}^{m\times n}$
-
-$A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix} $
-
-% normalbasis R2 und R3 
-% berechnungen zur basis
-
-\subsection{Determinante}
-
-%dreiecks matrizen
-
-\subsubsection{Satz von Sarrus}
-$\det(A) = aei + bfg + cdh - gec -hfa -idb.$
-
-$\det(A) = \det \begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - cb.$
-
-\subsection{Eigenwerte}
-
-% Eigenwerte ermitteln:
-
-% - mit \lambda * einheitsmatrix subtrahahieren
-% - determinante ausrechnen 
-% - nullstellen (von lambda) in determinanten-funktion
-
-
-% vektorräume
-% eigenraum
-% eigenvektor
-% basis
-
-% hesse matrix
-
-% stetigkeit
-% konvergenz
-% häufungspunkte
-% L'Hospital
-
-% Wahrscheinlichkeitsrechnung
-% Statistik
-
-% folgen/reihen
-% Relationen
 
 \section{Numerische Methoden}
 
 \todo{...}
+\todo{IT-Bezug}
 
 \subsection{Numerische Integration}
 \todo{...}
 
+
+\section{Wahrscheinlichkeitsrechnung}
+\todo{...}
+\todo{Statistik}
+
+\section{Statistik}
+
+
 \section{Zusätzliche Beispiele}
+\todo{Zahlentheorie asymmetrische Krytografie}
 \todo{Beispiele}
 
 \section{Herleitungen}
@@ -374,6 +645,8 @@ $\det(A) = \det \begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - cb.$
 
 \section{Beweise}
 \todo{Beweise erklären}
+
+\todo{Umformungsbeispiele?}
 
 
 \end{document}
